@@ -43,16 +43,17 @@ part02(char **arr, int len)
 
 		do {
 			int n = 10;
-			for (int j = 1; j < 10; j++) {
-				if (isdigit(*p1)) {
-					n = (*p1 - '0');
-					break;
-				}
-				int cmp = strncmp(p1, arr2[j], strlen(arr2[j]));
+			if (isdigit(*p1)) {
+				n = (*p1 - '0');
+				//break;
+			} else {
+				for (int j = 1; j < 10; j++) {
+					int cmp = strncmp(p1, arr2[j], strlen(arr2[j]));
 
-				if (cmp == 0) {
-					n = j;
-					break;
+					if (cmp == 0) {
+						n = j;
+						break;
+					}
 				}
 			}
 			if (n != 10) {
