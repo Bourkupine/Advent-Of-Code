@@ -1,4 +1,5 @@
 inputs/
 .vscode/
+days/dayXX.c
 
 main.exe
