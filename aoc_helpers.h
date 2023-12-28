@@ -4,6 +4,10 @@
 #include <stdint.h>
 
 
+/* Implementation of strndup */
+char*
+strndup( const char *s1, size_t n);
+
 /* Parse the file into the string array
  * @return length of array
  */
